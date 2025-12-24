@@ -1,5 +1,5 @@
 # Set the base image
-FROM python:3.10.6-slim-buster
+FROM python:3.10-slim-bullseye
 
 # Install required system packages
 RUN apt-get update && \
@@ -24,4 +24,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Set the command to run the Python script
+
 CMD ["python", "main.py"]
